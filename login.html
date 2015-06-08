@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fair House</title>
+    <script type="text/JavaScript" src="js/sha512.js"></script> 
+    <script type="text/JavaScript" src="js/forms.js"></script>
+	<script type="text/JavaScript" src="js/loginInit.js"></script>
+    <link rel="stylesheet" type="text/css" href="login.css">
+  </head>
+  <body>
+    <h1>Help End Housing Discrimination</h1>
+    <div>
+	  <h2>Knowledge Can Fight Discrimination</h2>
+	  <p>
+	  Housing discrimination is a pervasive problem nationwide. It is also 
+	  severely under-reported. The U.S. Department of Housing and Urban Development
+	  (HUD) estimates that more than two million instances of housing discrimination
+	  occur each year, but fewer than one percent are reported.
+	  </p>
+	  <p>
+	  Many people are unaware that they have been victims of housing discrimination.
+	  A 2002 study by HUD suggests that many renters and homebuyers do not fully 
+	  understand which activities are illegal under the Fair Housing Act.
+	  </P>
+	  <p>
+	  By sharing the information you have about what housing is available, and what
+	  its price is, you can help combat housing discrimination.
+	  </p>
+	  <p>Even if you do not believe that <em>you</em> been discriminated against, the
+	  information you share can help ensure that other people are not discriminated
+	  against.
+	  </p>
+    </div>
+
+    <div id="LogIn" >
+	<h2>Already a User. Log In!</h2>
+      <form id="login_form" action="includes/process_login.php" method="post" name="login_form">
+	    <p>Email</p>
+	    <input type="text" name="email" value="" required>
+		<p>Password</p>
+	    <input type="password" name="password" value="" required>
+		<p></p>
+	    <input id="LogInButton" type="button" name="LogInButton" value="Log In" onclick="return formhash(this.form, this.form.password);">
+      </form>
+	  <div id="loginResponse"></div>
+    </div>
+	
+	<div>
+	  <h2><a href="register.html">Not a User. Sign Up!</a></h2>
+	</div>
+	
+	<section id="display">
+	  
+	</section>
+	
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fair House</title>
+    <script type="text/JavaScript" src="js/sha512.js"></script> 
+    <script type="text/JavaScript" src="js/forms.js"></script>
+    <link rel="stylesheet" type="text/css" href="final.css">
+  </head>
+  <body>
+    <h1>Help End Housing Discrimination</h1>
+    <div>
+	  <h2>Not a user. Sign Up!</h2>
+	  	  <ul>
+            <li>Usernames may contain only digits, upper and lower case letters and underscores</li>
+            <li>Emails must have a valid email format</li>
+            <li>Passwords must be at least 6 characters long</li>
+            <li>Passwords must contain:
+                <ul>
+                    <li>At least one uppercase letter (A..Z)</li>
+                    <li>At least one lower case letter (a..z)</li>
+                    <li>At least one number (0..9)</li>
+                </ul>
+            </li>  
+            <li>Your password and confirmation must match exactly</li>
+      </ul>
+	       <form id="SignUp" action="includes/register.inc.php" method="post" name="SignUp">
+	    <p>Email</p>
+	    <input type="text" name="email" id="email" value="" required>
+		<p>Username</p>
+	    <input type="text" name="username" id="username" value="" required>
+	    <p>Password</p>
+	    <input type="password" name="password" id="password" value="" required>
+	    <p>Confirm Password</p>
+	    <input type="password" name="confirmpwd" id="confirmpwd" value="" required>
+		<p></p>
+	    <input id="SignUpButton" type="button" name="SignUpButton" value="Sign Up" 
+		  onclick="return regformhash(this.form,
+                                      this.form.username,
+                                      this.form.email,
+                                      this.form.password,
+                                      this.form.confirmpwd);">
+      </form>
+
+	<div id="response"></div>
+    </div>
+	
+    <div id="LogIn" >
+	<h2>Already a User. Log In!</h2>
+      <form id="login_form" action="includes/process_login.php" method="post" name="login_form">
+	    <p>Email</p>
+	    <input type="text" name="email" value="" required>
+		<p>Password</p>
+	    <input type="password" name="password" value="" required>
+		<p></p>
+	    <input id="LogInButton" type="button" name="LogInButton" value="Log In" onclick="return formhash(this.form, this.form.password);">
+      </form>
+	  <div id="loginResponse"></div>
+    </div>
+	
+	<div>
+	  The Fair Housing Act prohibits discrimination in housing on the basis of:
+	  </p>
+	  <ul>
+	    <li>Race or color</li>
+		<li>National origin</li>
+		<li>Religion</li>
+		<li>Sex</li>
+		<li>Familial status (families with children)</li>
+		<li>Disability</li>
+	  </ul>
+	</div>
+	
+  </body>
+</html>
